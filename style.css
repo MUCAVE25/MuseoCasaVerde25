@@ -1,0 +1,241 @@
+/* General */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Cambiado de 'Roboto' a 'Open Sans' */
+    background-color: #f9f9f9; /* Cambiado de #f4f4f4 a #f9f9f9 */
+    color: #333;
+}
+
+/* Encabezados y contenedores */
+.container h2 {
+    font-family: 'Merriweather', serif; /* Mantener para encabezados h2 */
+    color: #006600;
+}
+
+/* Barra de navegación y pie de página */
+.navbar, .footer {
+    background-color: #004d00;
+}
+
+.navbar-brand, .nav-link {
+    color: #fff;
+}
+
+/* Efectos hover en la barra de navegación */
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #003300;
+}
+
+/* Sección Hero */
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('Imagenes/MuCaBePrincipal.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    border-radius: 40px; /* Borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    max-width: 1250px; /* Ancho máximo del rectángulo */
+    margin: 10px auto; /* Centrado y margen superior */
+}
+
+.hero-section h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+}
+
+/* Nueva sección con encabezado */
+.section-header {
+    text-align: center;
+    padding: 50px 0;
+    font-family: 'Lora', serif;
+    font-size: 2.5rem;
+    color: #004d00;
+}
+
+/* Tarjetas y secciones */
+.section-card {
+    margin-bottom: 30px;
+}
+
+.section-card img {
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.section-card a {
+    margin: 15px 0;
+    font-family: 'Lora', serif;
+    color: #004d00;
+    font-size: 1.25rem;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Pie de página */
+.footer {
+    padding: 20px 0;
+    color: #fff;
+}
+
+.footer span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Selector de idioma */
+.language-selector {
+    display: flex;
+    align-items: center;
+}
+
+.language-selector select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+/* Estilo para las imágenes dentro del selector de idioma */
+.language-selector img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Imágenes y diseño de muros */
+.img-container {
+    text-align: center;
+}
+
+.muro {
+    padding: 30px 0;
+}
+
+.muro:nth-child(even) .muro-img {
+    order: 2; /* Cambia el orden de la imagen */
+}
+
+.muro-img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.muro-content {
+    padding: 20px;
+}
+
+.muro-title {
+    font-size: 1.75rem;
+    color: #004d00;
+}
+
+.muro-subtitle {
+    font-size: 1.25rem;
+    color: #006600;
+}
+
+/* Galería de imágenes */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.imagen {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.imagen:hover img {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.imagen:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.imagen:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: background 0.4s ease;
+}
+
+/* Pantalla completa para imágenes */
+.fullscreen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px; /* Añadir espacio entre las tarjetas en pantallas pequeñas */
+    }
+    .subheader {
+        font-size: 1.5rem; /* Ajustar tamaño de fuente en pantallas pequeñas */
+    }
+    .card p {
+        font-size: 1rem; /* Ajustar tamaño de los párrafos en pantallas pequeñas */
+    }
+}

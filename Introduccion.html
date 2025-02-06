@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo Regional "Casa Verde" de Tuxtepec</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #006108;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #004d00;
+            text-align: center;
+        }
+        h2 {
+            color: #006600;
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Estilos del selector de idioma */
+        .language-selector {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        .language-selector img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .language-selector select {
+            font-size: 16px;
+            padding: 5px;
+        }
+
+        /* Media query para pantallas pequeñas (teléfonos móviles) */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <script>
+        function cambiarIdioma() {
+            let selector = document.getElementById('idioma');
+            let idiomaSeleccionado = selector.value;
+
+            if (idiomaSeleccionado === "es") {
+                window.location.href = "Introduccion.html"; // Redirige a la página en español
+            } else if (idiomaSeleccionado === "en") {
+                window.location.href = "IntroduccionING.html"; // Redirige a la página en inglés
+            } else if (idiomaSeleccionado === "fr") {
+                window.location.href = "fr.html"; // Redirige a la página en francés
+            }
+        }
+
+        window.onload = function() {
+            document.getElementById('idioma').addEventListener('change', cambiarIdioma);
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Selector de Idioma -->
+    <div class="language-selector">
+        <label for="idioma">Selecciona tu idioma:</label>
+        <select id="idioma">
+            <option value="es" selected>Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+        </select>
+        <!-- Agregar imágenes de banderas -->
+        <img id="bandera" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/1024px-Flag_of_Spain.svg.png" alt="Español">
+    </div>
+
+    <div class="container">
+        <h1>BIENVENIDOS</h1>
+        <h2>MUSEO REGIONAL "CASA VERDE" DE TUXTEPEC</h2>
+
+        <p>
+            Como museo regional, este recinto deberá ser reflejo de las comunidades cuenqueñas constituidas por pueblos portadores 
+            de un rico legado fruto del sincretismo de las aportaciones de grupos étnicos y culturas que las han poblado desde su 
+            remoto pasado; influencias recíprocas, mestizaje y mezclas; de su relación con otras culturas y de la importante 
+            diversidad biológica y geográfica de la cual forma parte.
+        </p>
+        <p>
+            Ya que consideramos al Museo Regional de Tuxtepec como un museo vivo en el que además de difundir la historia de los 
+            pueblos y comunidades que conforman este gran mosaico geográfico-cultural, tiene el compromiso de dar a conocer las 
+            formas de vida de los actuales habitantes de la región, sus diferentes maneras de aprovechar los recursos naturales, sus
+            maneras de interpretar y representar el mundo que los rodea y todo aquello que llamamos cultura material y espiritual 
+            de los pueblos, una parte sustantiva de las actividades y exposiciones temporales que genere el museo tendrá un acento 
+            en la educación ambiental y los recursos naturales de la región. Este vasto patrimonio natural deberá ser visto como 
+            parte del patrimonio cultural. Sin el primero, no existiría el segundo. Los pueblos se asientan, viven y se producen en 
+            regiones determinadas no por casualidad.
+        </p>
+        <p>
+            La elección de un asentamiento responde a condiciones geográficas específicas y estas forman parte de la cultura de un 
+            pueblo, contribuyen a modelar las formas que adquiere una cultura. Reconocer el binomio hombre-naturaleza es una 
+            condición que debe permear el diálogo de este equipamiento con sus visitantes. Podríamos decir que este es un proyecto 
+            de geografía humana en el que las formas culturales, es decir, la influencia del ser humano agrupado en sociedades, 
+            influyen en el paisaje natural generando paisajes específicos para cada cultura en un tiempo y espacio 
+            determinados.
+        </p>
+    </div>
+
+</body>
+</html>

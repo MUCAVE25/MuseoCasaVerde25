@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MuCaVe - Museo Regional Casa Verde de Tuxtepec</title>
+    <meta name="description" content="Página oficial del Museo Regional Casa Verde de Tuxtepec (MuCaVe)">
+    <meta name="keywords" content="MuCaVe, Museo Regional, Casa Verde, Tuxtepec, Cultura, Historia">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google Fonts -->
+     <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"> <img src="Imagenes/log-Photoroom.png" width="45" height="45"> MuCaVe</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="salas.html">Salas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+            </ul>
+            <!-- Selector de idiomas -->
+            <div class="language-selector ms-auto">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="Imagenes/idiomaslogs/ESP.webp" width="20" height="20"> Español
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="changeLanguage('es')">
+                                <img src="Imagenes/idiomaslogs/ESP.webp" width="20" height="20"> Español
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="changeLanguage('en')">
+                                <img src="Imagenes/idiomaslogs/ING.webp" width="20" height="20"> English
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="changeLanguage('fr')">
+                                <img src="Imagenes/idiomaslogs/FRAC.webp" width="20" height="20"> Français
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>MUCAVE</h1>
+            <p>"Museo Regional Casa Verde de Tuxtepec"</p>
+            <p>Bienvenido al sitio oficial del Museo Regional Casa Verde de Tuxtepec, donde la historia y cultura de nuestra región se preservan y se comparten.</p>
+        </div>
+    </section>
+
+
+<!-- Contenido principal -->
+<div class="container mt-5">
+    <div class="row mb-4">
+        <!-- Tarjeta de Horario -->
+        <div class="col-md-4 mb-3">
+            <div class="card p-3" style="background-color: #e8f5e9; border: 1px solid #004d00; border-radius: 10px;">
+                <h2 class="subheader" style="color: #006600; text-align: center;">Horario</h2>
+                <h3 style="color: #333; text-align: center;">Martes a Domingo</h3>
+                <p style="font-size: 1.2rem; color: #333; text-align: center;">De 10:00 AM a 6:00 PM</p>
+            </div>
+        </div>
+
+        <!-- Tarjeta de Historia del Museo -->
+        <div class="col-md-8">
+            <a href="Introduccion.html" class="card p-3 text-decoration-none" style="background-color: #e8f5e9; border: 1px solid #004d00; border-radius: 10px;">
+                <h2 class="subheader" style="color: #006600; text-align: center;">Historia del Museo</h2>
+                <p style="color: #333; text-align: justify;">
+                    El Museo Regional Casa Verde de Tuxtepec se fundó con el objetivo de preservar y exhibir la rica cultura de la región. A través de sus salas, el museo presenta colecciones que abarcan desde la arqueología hasta el arte contemporáneo, destacando la diversidad cultural de Oaxaca.
+                </p>
+                <p style="color: #333; text-align: justify;">
+                    Desde su apertura, ha sido un espacio dedicado a la educación y la difusión cultural, donde los visitantes pueden apreciar el patrimonio histórico y artístico de la zona.
+                </p>
+            </a>
+        </div>
+    </div>
+</div>    
+                                       
+        
+
+        <h2 class="text-center">Guía del Museo</h2>
+        <p class="text-center">Explora las diferentes secciones de MuCaVe y descubre la riqueza cultural de nuestra región.</p>
+        <div class="img-container">
+            <section class="galeria">
+                <div class="imagen" onclick="openFullscreen(this)">
+                    <img src="Imagenes/MuCaVe01Sep24.jpeg" alt="Imagen 1">
+                </div>
+                <div class="imagen" onclick="openFullscreen(this)">
+                    <img src="Imagenes/imagen2.jpg" alt="Imagen 2">
+                </div>
+                <div class="imagen" onclick="openFullscreen(this)">
+                    <img src="Imagenes/imagen3.jpg" alt="Imagen 3">
+                </div>
+                <div class="imagen" onclick="openFullscreen(this)">
+                    <img src="Imagenes/imagen4.jpg" alt="Imagen 4">
+                </div>
+            </section>
+        </div>
+        
+        <!-- Contenedor de pantalla completa -->
+        <div id="fullscreen" class="fullscreen" onclick="closeFullscreen()">
+            <span class="close">&times;</span>
+            <img id="fullscreenImg" src="" alt="Fullscreen Image">
+        </div>
+           
+        
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <a href="salas.html" class="card p-3 mb-4 text-decoration-none text-dark">
+                    <h3 class="subheader">Planta Baja</h3>
+                    <ul>
+                        <li>Sala Arqueológica</li>
+                        <li>Sala Histórica</li>
+                        <li>Sala Textil</li>
+                        <li>Sala de Vainilla Chinanteca</li>
+                        <li>Corredor de Arte Indígena, Mestizo y Afromexicano</li>
+                        <li>Jardín Etnobotánico de Vainilla Chinanteca</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="salas.html" class="card p-3 mb-4 text-decoration-none text-dark">
+                    <h3 class="subheader">Planta Alta</h3>
+                    <ul>
+                        <li>Sala Felipe Matías Velazco</li>
+                        <li>Sala Audiovisual</li>
+                        <li>Sala de Arte Contemporáneo</li>
+                        <li>Sala Miguel Vélez Arceo</li>
+                        <li>Fonoteca Elías Meléndez Núñez</li>
+                        <li>Corredor del Arte Sotaventino</li>
+                        <li>Centro de Documentación de Vainilla y Fototeca</li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer mt-auto py-3" role="contentinfo">
+        <div class="container text-center">
+            <span>&copy; 2024 MuCaVe - Todos los derechos reservados</span>
+            <span>Museo Regional de Tuxtepec Casa Verde</span>
+            <span>Patronato del Museo Regional Casa Verde, AC</span>
+            <span>Vicente Guerrero s/n, CP 68300, San Juan Bautista Tuxtepec, Oaxaca</span>
+            <span>Tel.: 287 110 28 82</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Script para cambiar el idioma -->
+    <script>
+        function changeLanguage(lang) {
+            window.location.href = window.location.pathname + '?lang=' + lang;
+        }
+    </script>
+
+    <script src="script.js"></script> <!-- Tu archivo JavaScript -->
+</body>
+</html>
